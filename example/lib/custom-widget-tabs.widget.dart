@@ -144,7 +144,9 @@ class _CustomWidgetExampleState extends State<CustomWidgetExample> {
             });
           },
           selectedIndex: _controller.index,
+
         ),
+        isTop: true,
       ),
     );
   }

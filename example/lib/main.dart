@@ -231,6 +231,7 @@ class _ProvidedStylesExampleState extends State<ProvidedStylesExample> {
       body: PersistentTabView(
         context,
         controller: _controller,
+
         screens: _buildScreens(),
         items: _navBarsItems(),
         confineInSafeArea: true,
@@ -280,6 +281,7 @@ class _ProvidedStylesExampleState extends State<ProvidedStylesExample> {
           curve: Curves.ease,
           duration: Duration(milliseconds: 200),
         ),
+
         navBarStyle:
             NavBarStyle.style17, // Choose the nav bar style with this property
       ),

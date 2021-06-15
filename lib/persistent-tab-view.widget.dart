@@ -63,6 +63,8 @@ class PersistentTabView extends PersistentTabViewBase {
 
   final BuildContext context;
 
+  final bool isTop;
+
   PersistentTabView(this.context,
       {Key? key,
       List<PersistentBottomNavBarItem>? items,
@@ -89,6 +91,7 @@ class PersistentTabView extends PersistentTabViewBase {
       ItemAnimationProperties? itemAnimationProperties,
       this.hideNavigationBar,
       this.screenTransitionAnimation = const ScreenTransitionAnimation(),
+      this.isTop = false,
       NavBarStyle navBarStyle = NavBarStyle.style1})
       : super(
           key: key,
@@ -144,6 +147,7 @@ class PersistentTabView extends PersistentTabViewBase {
     this.selectedTabScreenContext,
     this.hideNavigationBarWhenKeyboardShows = true,
     this.backgroundColor = CupertinoColors.white,
+    this.isTop = false,
     CutsomWidgetRouteAndNavigatorSettings routeAndNavigatorSettings =
         const CutsomWidgetRouteAndNavigatorSettings(),
     this.confineInSafeArea = true,
@@ -283,6 +287,7 @@ class PersistentTabViewBase extends StatefulWidget {
   final BuildContext? context;
 
   final Function(BuildContext)? selectedTabScreenContext;
+  final bool isTop;
 
   const PersistentTabViewBase({
     Key? key,
@@ -316,6 +321,7 @@ class PersistentTabViewBase extends StatefulWidget {
     this.isCustomWidget,
     this.selectedTabScreenContext,
     this.routeAndNavigatorSettings,
+    this.isTop = false,
   }) : super(key: key);
 
   @override
@@ -613,6 +619,7 @@ class _PersistentTabViewState extends State<PersistentTabView> {
                       }
                       _controller!.index = index;
                     },
+              isTop: widget.isTop,
             ),
             isCustomWidget: widget.isCustomWidget,
             navBarDecoration: widget.decoration,
