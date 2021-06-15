@@ -642,6 +642,7 @@ class _PersistentTabViewState extends State<PersistentTabView> {
               }
             },
           ),
+          isTop: widget.isTop,
           tabBuilder: (BuildContext context, int index) {
             return SafeArea(
               top: false,

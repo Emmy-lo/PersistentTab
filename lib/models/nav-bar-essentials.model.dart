@@ -40,19 +40,20 @@ class NavBarEssentials {
     Function(int)? popAllScreensForTheSelectedTab,
     bool? popScreensOnTapOfSelectedTab,
     ItemAnimationProperties? itemAnimationProperties,
+    bool? isTop,
   }) {
     return NavBarEssentials(
-      selectedIndex: selectedIndex ?? this.selectedIndex,
-      previousIndex: previousIndex ?? this.previousIndex,
-      backgroundColor: backgroundColor ?? this.backgroundColor,
-      items: items ?? this.items,
-      onItemSelected: onItemSelected ?? this.onItemSelected,
-      navBarHeight: navBarHeight ?? this.navBarHeight,
-      padding: padding ?? this.padding,
-      popScreensOnTapOfSelectedTab:
-          popScreensOnTapOfSelectedTab ?? this.popScreensOnTapOfSelectedTab,
-      itemAnimationProperties:
-          itemAnimationProperties ?? this.itemAnimationProperties,
-    );
+        selectedIndex: selectedIndex ?? this.selectedIndex,
+        previousIndex: previousIndex ?? this.previousIndex,
+        backgroundColor: backgroundColor ?? this.backgroundColor,
+        items: items ?? this.items,
+        onItemSelected: onItemSelected ?? this.onItemSelected,
+        navBarHeight: navBarHeight ?? this.navBarHeight,
+        padding: padding ?? this.padding,
+        popScreensOnTapOfSelectedTab:
+            popScreensOnTapOfSelectedTab ?? this.popScreensOnTapOfSelectedTab,
+        itemAnimationProperties:
+            itemAnimationProperties ?? this.itemAnimationProperties,
+        isTop: isTop != null ? isTop : false);
   }
 }
