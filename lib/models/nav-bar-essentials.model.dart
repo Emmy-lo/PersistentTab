@@ -11,6 +11,7 @@ class NavBarEssentials {
   final bool? popScreensOnTapOfSelectedTab;
   final ItemAnimationProperties? itemAnimationProperties;
   final BuildContext? selectedScreenBuildContext;
+  final bool isTop;
 
   const NavBarEssentials({
     Key? key,
@@ -23,6 +24,7 @@ class NavBarEssentials {
     required this.items,
     this.onItemSelected,
     this.padding,
+    this.isTop = false,
     this.selectedScreenBuildContext,
   });
 
